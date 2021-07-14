@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\INTERNSHIP\\odml-pathways-main\\object-detection\\codelab2\\android\\final\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "E:\\INTERNSHIP\\demoTFLite\\final\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
                     "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-2\\files-2.1\\ab75dfbbd723f28d9ab1c4d69d43602e\\constraintlayout-2.0.4\\res\\values\\values.xml",
@@ -59,23 +59,6 @@
                     }
                 },
                 {
-                    "source": "E:\\INTERNSHIP\\odml-pathways-main\\object-detection\\codelab2\\android\\final\\app\\src\\main\\res\\values\\colors.xml",
-                    "from": {
-                        "startLines": "7,2,3,4,5,6,8",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "286,55,102,149,196,241,328",
-                        "endColumns": "41,46,46,46,44,44,41",
-                        "endOffsets": "323,97,144,191,236,281,365"
-                    },
-                    "to": {
-                        "startLines": "403,491,492,493,504,505,508",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "19541,25534,25581,25628,26372,26417,26583",
-                        "endColumns": "41,46,46,46,44,44,41",
-                        "endOffsets": "19578,25576,25623,25670,26412,26457,26620"
-                    }
-                },
-                {
                     "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-2\\files-2.1\\f4b54cfba9f25426c71fd95ff842a711\\transition-1.2.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11",
@@ -90,23 +73,6 @@
                         "startOffsets": "55098,55138,55832,56014,56069,57201,57255,57307,57356,57417",
                         "endColumns": "39,46,42,54,46,53,51,48,60,49",
                         "endOffsets": "55133,55180,55870,56064,56111,57250,57302,57351,57412,57462"
-                    }
-                },
-                {
-                    "source": "E:\\INTERNSHIP\\odml-pathways-main\\object-detection\\codelab2\\android\\final\\app\\src\\main\\res\\values\\strings.xml",
-                    "from": {
-                        "startLines": "1,3,4,2",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "16,131,216,78",
-                        "endColumns": "61,84,64,52",
-                        "endOffsets": "73,211,276,126"
-                    },
-                    "to": {
-                        "startLines": "1043,1116,1117,1118",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "61089,72517,72602,72667",
-                        "endColumns": "61,84,64,52",
-                        "endOffsets": "61146,72597,72662,72715"
                     }
                 },
                 {
@@ -167,6 +133,25 @@
                     }
                 },
                 {
+                    "source": "E:\\INTERNSHIP\\demoTFLite\\final\\app\\src\\main\\res\\values\\themes.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "100",
+                        "endLines": "14",
+                        "endColumns": "12",
+                        "endOffsets": "824"
+                    },
+                    "to": {
+                        "startLines": "3756",
+                        "startColumns": "4",
+                        "startOffsets": "249386",
+                        "endLines": "3768",
+                        "endColumns": "12",
+                        "endOffsets": "250108"
+                    }
+                },
+                {
                     "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-2\\files-2.1\\7768ef850c6e7f23afc64bde82056cbc\\jetified-appcompat-resources-1.2.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,29,36,47,74",
@@ -224,22 +209,20 @@
                     }
                 },
                 {
-                    "source": "E:\\INTERNSHIP\\odml-pathways-main\\object-detection\\codelab2\\android\\final\\app\\src\\main\\res\\values\\themes.xml",
+                    "source": "E:\\INTERNSHIP\\demoTFLite\\final\\app\\src\\main\\res\\values\\strings.xml",
                     "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "100",
-                        "endLines": "14",
-                        "endColumns": "12",
-                        "endOffsets": "824"
+                        "startLines": "1,3,4,2",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "16,131,216,78",
+                        "endColumns": "61,84,64,52",
+                        "endOffsets": "73,211,276,126"
                     },
                     "to": {
-                        "startLines": "3756",
-                        "startColumns": "4",
-                        "startOffsets": "249386",
-                        "endLines": "3768",
-                        "endColumns": "12",
-                        "endOffsets": "250108"
+                        "startLines": "1043,1116,1117,1118",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "61089,72517,72602,72667",
+                        "endColumns": "61,84,64,52",
+                        "endOffsets": "61146,72597,72662,72715"
                     }
                 },
                 {
@@ -259,6 +242,23 @@
                         "endLines": "313,650,651,652,660,661,662,943,7178",
                         "endColumns": "55,58,47,55,74,75,71,65,24",
                         "endOffsets": "14897,36069,36117,36173,36859,36935,37007,55280,465389"
+                    }
+                },
+                {
+                    "source": "E:\\INTERNSHIP\\demoTFLite\\final\\app\\src\\main\\res\\values\\colors.xml",
+                    "from": {
+                        "startLines": "7,2,3,4,5,6,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "286,55,102,149,196,241,328",
+                        "endColumns": "41,46,46,46,44,44,41",
+                        "endOffsets": "323,97,144,191,236,281,365"
+                    },
+                    "to": {
+                        "startLines": "403,491,492,493,504,505,508",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "19541,25534,25581,25628,26372,26417,26583",
+                        "endColumns": "41,46,46,46,44,44,41",
+                        "endOffsets": "19578,25576,25623,25670,26412,26457,26620"
                     }
                 }
             ]

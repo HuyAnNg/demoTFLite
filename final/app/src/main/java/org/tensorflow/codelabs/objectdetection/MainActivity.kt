@@ -121,7 +121,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         // Step 2: Initialize the detector object
         val options = ObjectDetector.ObjectDetectorOptions.builder()
-                .setMaxResults(12)
+                .setMaxResults(11)
                 .setScoreThreshold(0.2f)
                 .build()
         val detector = ObjectDetector.createFromFileAndOptions(
@@ -138,7 +138,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val resultToDisplay = results.map {
             // Get the top-1 category and craft the display text
             val category = it.categories.first()
-            val text = "${category.label}, ${category.score.times(100).toInt()}%"
+            val text = "${category.label} ${"-"} ${category.score.times(100).toInt()}%"
 
             // Create a data object to display the detection result
             DetectionResult(it.boundingBox, text)
