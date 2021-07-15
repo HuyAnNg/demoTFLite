@@ -121,12 +121,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         // Step 2: Initialize the detector object
         val options = ObjectDetector.ObjectDetectorOptions.builder()
-                .setMaxResults(11)
-                .setScoreThreshold(0.2f)
+                .setMaxResults(15)
+                .setScoreThreshold(0.15f)
                 .build()
         val detector = ObjectDetector.createFromFileAndOptions(
                 this,
-                "model.tflite",
+                "modelLite2.tflite",
                 options
         )
 
