@@ -1,7 +1,7 @@
-#Wed Jul 14 22:17:46 ICT 2021
-base.0=E\:\\INTERNSHIP\\demoTFLite\\final\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+#Wed Oct 13 01:22:37 ICT 2021
+base.0=E\:\\INTERNSHIP\\MOBILE MODEL\\demoTFLite\\final\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=E\:\\INTERNSHIP\\demoTFLite\\final\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex
+base.1=E\:\\INTERNSHIP\\MOBILE MODEL\\demoTFLite\\final\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex

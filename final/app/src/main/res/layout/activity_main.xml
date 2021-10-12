@@ -39,7 +39,7 @@
         android:layout_marginBottom="10dp"
         android:text="@string/tv_description" />
 
-    <LinearLayout
+    <HorizontalScrollView
         android:id="@+id/llSampleImage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -47,46 +47,158 @@
         android:gravity="center_horizontal"
         android:orientation="horizontal">
 
-        <ImageView
-            android:id="@+id/imgSampleOne"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:adjustViewBounds="true"
-            android:contentDescription="@null"
-            android:scaleType="centerCrop"
-            android:src="@drawable/test_wing" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/captureImageFab"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
 
-        <ImageView
-            android:id="@+id/imgSampleTwo"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:adjustViewBounds="true"
-            android:contentDescription="@null"
-            android:scaleType="centerCrop"
-            android:src="@drawable/wing1_1" />
+            <ImageView
+                android:id="@+id/imgSampleOne"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/wing1" />
 
-        <ImageView
-            android:id="@+id/imgSampleThree"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:adjustViewBounds="true"
-            android:contentDescription="@null"
-            android:scaleType="centerCrop"
-            android:src="@drawable/train_wing" />
-    </LinearLayout>
+            <ImageView
+                android:id="@+id/imgSampleTwo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/wing2" />
 
-    <Button
+            <ImageView
+                android:id="@+id/imgSampleThree"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/wing3" />
+
+            <ImageView
+                android:id="@+id/imgSampleFour"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="12dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/wing4" />
+
+            <ImageView
+                android:id="@+id/imgSampleFive"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="12dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pic1" />
+
+            <ImageView
+                android:id="@+id/imgSampleSix"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="12dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/baby" />
+
+            <ImageView
+                android:id="@+id/imgSampleSeven"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="12dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cars" />
+
+            <ImageView
+                android:id="@+id/imgSampleEight"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="12dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/farm" />
+
+            <ImageView
+                android:id="@+id/imgSampleNine"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="12dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/people" />
+
+            <ImageView
+                android:id="@+id/imgSampleTen"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="12dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/people2" />
+
+            <ImageView
+                android:id="@+id/imgSampleEleven"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="12dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cat" />
+
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <LinearLayout
         android:id="@+id/captureImageFab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center|bottom"
-        android:layout_margin="16dp"
+        android:layout_marginTop="16dp"
         android:drawableLeft="@drawable/ic_camera"
+        android:orientation="horizontal"
         android:text="@string/tv_take_photo"
-        android:textAllCaps="false" />
+        android:textAllCaps="false">
+
+        <Button
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:drawableLeft="@drawable/ic_camera"
+            android:text="@string/tv_take_photo"
+            android:textAllCaps="false" />
+
+
+        <Button
+            android:id="@+id/model_root"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/tv_choose"
+            android:textAllCaps="false" />
+
+
+    </LinearLayout>
 
 </RelativeLayout>

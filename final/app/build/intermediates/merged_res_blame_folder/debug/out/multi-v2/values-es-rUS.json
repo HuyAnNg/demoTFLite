@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\INTERNSHIP\\demoTFLite\\final\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-es-rUS\\values-es-rUS.xml",
+            "outputFile": "E:\\INTERNSHIP\\MOBILE MODEL\\demoTFLite\\final\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-es-rUS\\values-es-rUS.xml",
             "map": [
                 {
                     "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-2\\files-2.1\\4102c377b7a8a929cfb8c6bcf858d486\\appcompat-1.2.0\\res\\values-es-rUS\\values-es-rUS.xml",

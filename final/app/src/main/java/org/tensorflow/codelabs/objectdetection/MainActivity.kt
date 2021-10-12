@@ -1,4 +1,3 @@
-
 package org.tensorflow.codelabs.objectdetection
 
 import android.app.Activity
@@ -42,6 +41,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var imgSampleOne: ImageView
     private lateinit var imgSampleTwo: ImageView
     private lateinit var imgSampleThree: ImageView
+    private lateinit var imgSampleFour: ImageView
+    private lateinit var imgSampleFive: ImageView
+    private lateinit var imgSampleSix: ImageView
+    private lateinit var imgSampleSeven: ImageView
+    private lateinit var imgSampleEight: ImageView
+    private lateinit var imgSampleNine: ImageView
+    private lateinit var imgSampleTen: ImageView
+    private lateinit var imgSampleEleven: ImageView
     private lateinit var tvPlaceholder: TextView
     private lateinit var currentPhotoPath: String
 
@@ -54,12 +61,28 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         imgSampleOne = findViewById(R.id.imgSampleOne)
         imgSampleTwo = findViewById(R.id.imgSampleTwo)
         imgSampleThree = findViewById(R.id.imgSampleThree)
+        imgSampleFour = findViewById(R.id.imgSampleFour)
+        imgSampleFive = findViewById(R.id.imgSampleFive)
+        imgSampleSix = findViewById(R.id.imgSampleSix)
+        imgSampleSeven = findViewById(R.id.imgSampleSeven)
+        imgSampleEight = findViewById(R.id.imgSampleEight)
+        imgSampleNine = findViewById(R.id.imgSampleNine)
+        imgSampleTen = findViewById(R.id.imgSampleTen)
+        imgSampleEleven = findViewById(R.id.imgSampleEleven)
         tvPlaceholder = findViewById(R.id.tvPlaceholder)
 
         captureImageFab.setOnClickListener(this)
         imgSampleOne.setOnClickListener(this)
         imgSampleTwo.setOnClickListener(this)
         imgSampleThree.setOnClickListener(this)
+        imgSampleFour.setOnClickListener(this)
+        imgSampleFive.setOnClickListener(this)
+        imgSampleSix.setOnClickListener(this)
+        imgSampleSeven.setOnClickListener(this)
+        imgSampleEight.setOnClickListener(this)
+        imgSampleNine.setOnClickListener(this)
+        imgSampleTen.setOnClickListener(this)
+        imgSampleEleven.setOnClickListener(this)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -85,13 +108,37 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 }
             }
             R.id.imgSampleOne -> {
-                setViewAndDetect(getSampleImage(R.drawable.test_wing))
+                setViewAndDetect(getSampleImage(R.drawable.wing1))
             }
             R.id.imgSampleTwo -> {
-                setViewAndDetect(getSampleImage(R.drawable.wing1_1))
+                setViewAndDetect(getSampleImage(R.drawable.wing2))
             }
             R.id.imgSampleThree -> {
-                setViewAndDetect(getSampleImage(R.drawable.train_wing))
+                setViewAndDetect(getSampleImage(R.drawable.wing3))
+            }
+            R.id.imgSampleFour -> {
+                setViewAndDetect(getSampleImage(R.drawable.wing4))
+            }
+            R.id.imgSampleFive -> {
+                setViewAndDetect(getSampleImage(R.drawable.pic1))
+            }
+            R.id.imgSampleSix -> {
+                setViewAndDetect(getSampleImage(R.drawable.baby))
+            }
+            R.id.imgSampleSeven -> {
+                setViewAndDetect(getSampleImage(R.drawable.cars))
+            }
+            R.id.imgSampleEight -> {
+                setViewAndDetect(getSampleImage(R.drawable.farm))
+            }
+            R.id.imgSampleNine -> {
+                setViewAndDetect(getSampleImage(R.drawable.people))
+            }
+            R.id.imgSampleTen -> {
+                setViewAndDetect(getSampleImage(R.drawable.people2))
+            }
+            R.id.imgSampleEleven -> {
+                setViewAndDetect(getSampleImage(R.drawable.cat))
             }
         }
     }
@@ -103,16 +150,17 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private fun runObjectDetection(bitmap: Bitmap) {
         // Step 1: Create TFLite's TensorImage object
         val image = TensorImage.fromBitmap(bitmap)
+        val model = "model_root.tflite"
 
         // Step 2: Initialize the detector object
         val options = ObjectDetector.ObjectDetectorOptions.builder()
-                .setMaxResults(15)
-                .setScoreThreshold(0.15f)
-                .build()
+            .setMaxResults(15)
+            .setScoreThreshold(0.30f)
+            .build()
         val detector = ObjectDetector.createFromFileAndOptions(
-                this,
-                "modelLite0.tflite",
-                options
+            this,
+            model,
+            options
         )
 
         // Step 3: Feed given image to the detector
@@ -139,11 +187,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
      * debugPrint(visionObjects: List<Detection>)
      *      Print the detection result to logcat to examine
      */
-    private fun debugPrint(results : List<Detection>) {
+    private fun debugPrint(results: List<Detection>) {
         for ((i, obj) in results.withIndex()) {
             val box = obj.boundingBox
 
-            Log.d(TAG,"====================================")
+            Log.d(TAG, "====================================")
             Log.d(TAG, "Detected object: ${i} ")
             Log.d(TAG, "  boundingBox: (${box.left}, ${box.top}) - (${box.right},${box.bottom})")
 
