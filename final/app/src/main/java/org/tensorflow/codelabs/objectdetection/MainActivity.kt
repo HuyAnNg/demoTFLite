@@ -13,6 +13,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
 import androidx.exifinterface.media.ExifInterface
@@ -30,6 +31,7 @@ import kotlin.math.max
 import kotlin.math.min
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
+    var model = "modelLite0.tflite"
     companion object {
         const val TAG = "TFLite - ODT"
         const val REQUEST_IMAGE_CAPTURE: Int = 1
@@ -37,6 +39,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private lateinit var captureImageFab: Button
+    private lateinit var root: Button
+    private lateinit var model0: Button
+    private lateinit var model1: Button
+    private lateinit var model2: Button
+    private lateinit var model3: Button
     private lateinit var inputImageView: ImageView
     private lateinit var imgSampleOne: ImageView
     private lateinit var imgSampleTwo: ImageView
@@ -57,6 +64,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_main)
 
         captureImageFab = findViewById(R.id.captureImageFab)
+        root = findViewById(R.id.root)
+        model0 = findViewById(R.id.model0)
+        model1 = findViewById(R.id.model1)
+        model2 = findViewById(R.id.model2)
+        model3 = findViewById(R.id.model3)
         inputImageView = findViewById(R.id.imageView)
         imgSampleOne = findViewById(R.id.imgSampleOne)
         imgSampleTwo = findViewById(R.id.imgSampleTwo)
@@ -72,6 +84,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         tvPlaceholder = findViewById(R.id.tvPlaceholder)
 
         captureImageFab.setOnClickListener(this)
+        root.setOnClickListener(this)
+        model0.setOnClickListener(this)
+        model1.setOnClickListener(this)
+        model2.setOnClickListener(this)
+        model3.setOnClickListener(this)
         imgSampleOne.setOnClickListener(this)
         imgSampleTwo.setOnClickListener(this)
         imgSampleThree.setOnClickListener(this)
@@ -100,9 +117,49 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
      */
     override fun onClick(v: View?) {
         when (v?.id) {
-            R.id.captureImageFab -> {
+            R.id.captureImageFabView -> {
                 try {
                     dispatchTakePictureIntent()
+                } catch (e: ActivityNotFoundException) {
+                    Log.e(TAG, e.message.toString())
+                }
+            }
+            R.id.root -> {
+                try {
+                    model="model_root.tflite"
+                    Toast.makeText(applicationContext,"Succeeded",Toast.LENGTH_SHORT).show()
+                } catch (e: ActivityNotFoundException) {
+                    Log.e(TAG, e.message.toString())
+                }
+            }
+            R.id.model0 -> {
+                try {
+                    model="modelLite0.tflite"
+                    Toast.makeText(applicationContext,"Succeeded",Toast.LENGTH_SHORT).show()
+                } catch (e: ActivityNotFoundException) {
+                    Log.e(TAG, e.message.toString())
+                }
+            }
+            R.id.model1 -> {
+                try {
+                    model="modelLite1.tflite"
+                    Toast.makeText(applicationContext,"Succeeded",Toast.LENGTH_SHORT).show()
+                } catch (e: ActivityNotFoundException) {
+                    Log.e(TAG, e.message.toString())
+                }
+            }
+            R.id.model2 -> {
+                try {
+                    model="modelLite2.tflite"
+                    Toast.makeText(applicationContext,"Succeeded",Toast.LENGTH_SHORT).show()
+                } catch (e: ActivityNotFoundException) {
+                    Log.e(TAG, e.message.toString())
+                }
+            }
+            R.id.model3 -> {
+                try {
+                    model="modelLite3.tflite"
+                    Toast.makeText(applicationContext,"Succeeded",Toast.LENGTH_SHORT).show()
                 } catch (e: ActivityNotFoundException) {
                     Log.e(TAG, e.message.toString())
                 }
@@ -114,10 +171,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 setViewAndDetect(getSampleImage(R.drawable.wing2))
             }
             R.id.imgSampleThree -> {
-                setViewAndDetect(getSampleImage(R.drawable.wing3))
+                setViewAndDetect(getSampleImage(R.drawable.wing5))
             }
             R.id.imgSampleFour -> {
-                setViewAndDetect(getSampleImage(R.drawable.wing4))
+                setViewAndDetect(getSampleImage(R.drawable.wing6))
             }
             R.id.imgSampleFive -> {
                 setViewAndDetect(getSampleImage(R.drawable.pic1))
@@ -150,12 +207,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private fun runObjectDetection(bitmap: Bitmap) {
         // Step 1: Create TFLite's TensorImage object
         val image = TensorImage.fromBitmap(bitmap)
-        val model = "model_root.tflite"
 
         // Step 2: Initialize the detector object
         val options = ObjectDetector.ObjectDetectorOptions.builder()
             .setMaxResults(15)
-            .setScoreThreshold(0.30f)
+            .setScoreThreshold(0.22f)
             .build()
         val detector = ObjectDetector.createFromFileAndOptions(
             this,
